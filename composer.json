@@ -1,0 +1,33 @@
+{
+    "name": "laext/scripty",
+    "description": "This is a laravel-admin script extension",
+    "type": "library",
+    "keywords": ["laravel-admin", "extension", "javascript", "scripty"],
+    "homepage": "https://github.com/laext/scripty",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "linkimfly",
+            "email": "linkimfly@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.0.0",
+        "encore/laravel-admin": "~1.6"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~6.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Laext\\Scripty\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Laext\\Scripty\\ScriptyServiceProvider"
+            ]
+        }
+    }
+}
