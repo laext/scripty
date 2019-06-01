@@ -19,7 +19,8 @@ class Scripty extends Field
 		if ($this->script instanceof \Closure) {
 			$this->script = $this->script->call($this->form->model(), $this->form);
 		}
-		
+		$this->script = preg_replace("/<script>/", '', $this->script);
+		$this->script = preg_replace("/<\/script>/", '', $this->script);
 		Admin::script($this->script);
 	}
 }
